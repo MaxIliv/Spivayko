@@ -1,0 +1,29 @@
+section#hero {
+    
+    position: relative;
+    min-height: 100vh;
+    @include bg-img('/static/img/hero.jpg', cover);
+    @include font-montserat();
+
+    .hero {
+        @include full-size();
+        @include flex();
+
+        &__content {
+            z-index: 1;
+            width: 100%;
+            @include pos(absolute, 45%);
+
+            h1, h3 { color: $white; }
+            h1 {
+                font-weight: bold;
+                font-size: $fs-hero-lg;
+                margin: 25px 0;
+            }
+            
+            &-inner {
+                max-width: 300px;
+            }
+        }
+    }
+}

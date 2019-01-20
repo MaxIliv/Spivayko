@@ -1,0 +1,68 @@
+// $fs: 14px;
+// $fslg: 32px;
+
+// .icon {
+//     font-size: $fs;
+
+//     &--large {
+//         font-size: $fslg;
+//     }
+
+//     &--orange {
+//         color: $orangeMain;
+//     }
+// }
+
+.icon {
+    width: 32px;
+
+    &--large {
+        width: 52px;
+    }
+}
+
+i {
+    // margin: .3em;
+    cursor: pointer;
+    transition: color 300ms ease;
+    // transform: translateZ(0);
+    color: $black;
+    
+    &:hover {
+    }
+    &.fa-twitter {
+        color: #00aced;
+    }
+
+    &.fa-facebook-official {
+        color: #3b5998;
+    }
+
+    &.fa-soundcloud {
+        color: #ff3a00;
+    }
+
+    &.fa-instagram {
+        color: #bc2a8d;
+    }
+
+    &.fa-vk {
+        color: #45668e;
+    }
+
+    &.fa-youtube-play {
+        color: #bb0000;
+    }
+
+    &.fa-google-plus {
+        color: #D43402;
+    }
+
+    &.fa-envelope {
+        color: #dd4b39;
+    }
+
+    &.fa-mobile {
+        color: #fff;
+    }
+}

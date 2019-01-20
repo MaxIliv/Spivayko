@@ -1,0 +1,79 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: block;
+
+    @include mq('tablet-wide', max) {
+        padding: 0 50px;
+    }
+}
+
+.section {
+    min-height: 400px;
+    padding: 50px 0px;
+
+    @include mq('tablet-wide') {
+        padding: 75px 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+
+    &--gradient {
+        background-image: linear-gradient($black, rgba($black, .5), rgba($black, .3));
+    }
+}
+
+a {
+    color: rgba($white, .8);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0 5px;
+    margin: 0 10px;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+        color: $white;
+        border-bottom: 1px solid $orangeMain;        
+    }
+}
+
+.ul {
+    text-align: left;
+
+    li {
+        line-height: 1.2;
+    }
+
+    &--square {
+        list-style: none;
+
+        li::before {
+            content: "\25aa";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: red; /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */ 
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
+            font-size: 20px;
+            vertical-align: sub;
+        }
+    }
+
+    &--orange {
+        li:before {
+            color: $orangeMain;
+        }
+    }
+}

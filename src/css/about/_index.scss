@@ -1,0 +1,25 @@
+section#about {
+    @include bg-img('/static/img/music-notes.png', contain);
+}
+
+.info-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+    &__item {
+        display: flex;
+        flex: 50%;
+        margin-bottom: 50px;
+        padding-right: 55px;
+
+        h4 {
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__icon {
+        margin-right: 20px;
+    }
+}

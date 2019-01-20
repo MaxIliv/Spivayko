@@ -1,0 +1,33 @@
+$fs: 14px;
+$fsh4: 16px;
+$fsh3: 18px;
+$fsh2: 24px;
+$fsh1: 32px;
+$fs-hero-lg: 60px;
+$fs-hero-lg: 60px;
+ 
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: $fsh1;
+}
+
+h2 {
+    font-size: $fsh2;
+}
+
+h3 {
+    font-size: $fsh3;
+}
+
+h4 {
+    font-size: $fsh4;
+}
+
+p {
+    font-size: $fs;
+}
+

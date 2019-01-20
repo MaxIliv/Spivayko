@@ -1,0 +1,428 @@
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+/*
+    ===== PADDINGS =====
+*/
+/*
+    ===== PADDINGS END =====
+*/
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+.section {
+  min-height: 400px;
+  padding: 50px 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section {
+    padding: 75px 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+.overlay--gradient {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+
+a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 0 5px;
+  margin: 0 10px;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(249, 185, 19, 0.8);
+}
+
+.ul {
+  text-align: left;
+}
+
+.ul li {
+  line-height: 1.2;
+}
+
+.ul--square {
+  list-style: none;
+}
+
+.ul--square li::before {
+  content: "\25aa";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+  font-size: 20px;
+  vertical-align: sub;
+}
+
+.ul--orange li:before {
+  color: rgba(249, 185, 19, 0.8);
+}
+
+.icon {
+  width: 32px;
+}
+
+.icon--large {
+  width: 52px;
+}
+
+i {
+  cursor: pointer;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+  color: #000000;
+}
+
+i.fa-twitter {
+  color: #00aced;
+}
+
+i.fa-facebook-official {
+  color: #3b5998;
+}
+
+i.fa-soundcloud {
+  color: #ff3a00;
+}
+
+i.fa-instagram {
+  color: #bc2a8d;
+}
+
+i.fa-vk {
+  color: #45668e;
+}
+
+i.fa-youtube-play {
+  color: #bb0000;
+}
+
+i.fa-google-plus {
+  color: #D43402;
+}
+
+i.fa-envelope {
+  color: #dd4b39;
+}
+
+i.fa-mobile {
+  color: #fff;
+}
+
+.text-important {
+  display: inline-block;
+  padding: 5px 5px 10px;
+}
+
+.text-important--orange {
+  background-color: rgba(249, 185, 19, 0.8);
+}
+
+.heading--line-top :before {
+  content: '';
+  display: block;
+  background: rgba(249, 185, 19, 0.8);
+  height: 1px;
+  width: 150px;
+  margin: 25px auto;
+}
+
+.heading--line-bottom:after {
+  content: '';
+  display: block;
+  background: rgba(249, 185, 19, 0.8);
+  height: 1px;
+  width: 150px;
+  margin: 25px auto;
+}
+
+.heading-main {
+  text-align: center;
+}
+
+.heading-main__header {
+  margin-bottom: 25px;
+}
+
+.dots {
+  width: 10px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  z-index: 2;
+}
+
+.dots__item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #545454;
+  border: 1px solid transparent;
+  margin: 10px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dots__item--active {
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid rgba(249, 185, 19, 0.8);
+}
+
+.dots__item:hover {
+  background-color: rgba(249, 185, 19, 0.8);
+}
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+.nav--top {
+  top: 20px;
+}
+
+.nav--bg {
+  background: #ffffff;
+  color: #000000;
+}
+
+.nav--bg a {
+  color: #000000;
+}
+
+.nav--bg .nav__logo-light {
+  display: none;
+}
+
+.nav--bg .nav__logo-dark {
+  display: block;
+}
+
+.nav__logo {
+  cursor: pointer;
+}
+
+.nav__logo-light {
+  display: block;
+}
+
+.nav__logo-dark {
+  display: none;
+}
+
+.nav__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav__inner {
+    padding: 20px 0;
+  }
+}
+
+section#hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/static/img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section#hero .hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#hero .hero__content {
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+section#hero .hero__content h1, section#hero .hero__content h3 {
+  color: #ffffff;
+}
+
+section#hero .hero__content h1 {
+  font-weight: bold;
+  font-size: 60px;
+  margin: 25px 0;
+}
+
+section#hero .hero__content-inner {
+  max-width: 300px;
+}
+
+section#about {
+  background-image: url("/static/img/music-notes.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.info-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin-bottom: 50px;
+  padding-right: 55px;
+}
+
+.info-list__item h4 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.info-list__icon {
+  margin-right: 20px;
+}
+
+section#workWith {
+  background-color: #f1f1f1;
+}
+
+.working-with {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.working-with__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 80px;
+}
+
+.working-with__half {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.working-with__item {
+  text-align: center;
+}
+
+.working-with__item h3 {
+  margin-bottom: 10px;
+}
+
+.working-with__img {
+  margin: 0 auto;
+}
+
+.working-with__icon {
+  max-width: 75px;
+  margin: 0 auto 20px;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body.side-nav--opened, body.modal--opened {
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+@import "base/index";
+@import "indicators/index";
+@import "nav/index";
+@import "hero/index";
+@import "about/index";
+@import "workWith/index";
+// @import "modal/index";
+// @import "sideNav/index";
+
+
+body {
+    font-size: $fs;
+
+    @include font-exo2();
+
+    &.side-nav--opened, &.modal--opened {
+        overflow: hidden;
+    }
+}

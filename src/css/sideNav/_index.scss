@@ -1,0 +1,23 @@
+.side-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 300px;
+    background: $white;
+    z-index: 1;
+    padding: $pd-lg;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    overflow: auto;
+    
+    &__inner {
+        
+    }
+}
+
+.side-nav--opened {
+    .side-nav {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,34 @@
+section#workWith {
+    background-color: $gray;
+}
+
+.working-with {
+    @include flex();
+
+    &__content {
+        @include flex();
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+
+    &__half {
+        flex: 50%;
+    }
+
+    &__item {
+        text-align: center;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__icon {
+        max-width: 75px;
+        margin: 0 auto 20px;
+    }
+}

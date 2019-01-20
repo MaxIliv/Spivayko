@@ -1,0 +1,43 @@
+$size-sm: 6px;
+$size-lg: 10px;
+$margin: $size-lg 0;
+
+.dots {
+    width: 10px;
+    text-align: center;
+    @include pos(fixed, 50%);
+    right: $size-lg * 2;
+    z-index: 2;
+
+
+    &--light {
+
+    }
+
+    &--dark {
+
+    
+    }
+
+    &__item {
+        width: $size-sm;
+        height: $size-sm;
+        border-radius: 50%;
+        background: $gray-dark;
+        border: 1px solid transparent;
+        margin: $margin;
+        display: inline-block;
+        cursor: pointer;
+
+        &--active {
+            width: $size-lg;
+            height: $size-lg;
+            background: none;
+            border: 1px solid $orangeMain;
+        }
+
+        &:hover {
+            background-color: $orangeMain;
+        }
+    }
+}

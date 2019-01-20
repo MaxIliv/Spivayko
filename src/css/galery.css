@@ -1,0 +1,252 @@
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+/*
+    ===== PADDINGS =====
+*/
+/*
+    ===== PADDINGS END =====
+*/
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+.section {
+  min-height: 400px;
+  padding: 50px 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section {
+    padding: 75px 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+.overlay--gradient {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+
+a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 0 5px;
+  margin: 0 10px;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(249, 185, 19, 0.8);
+}
+
+.ul {
+  text-align: left;
+}
+
+.ul li {
+  line-height: 1.2;
+}
+
+.ul--square {
+  list-style: none;
+}
+
+.ul--square li::before {
+  content: "\25aa";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+  font-size: 20px;
+  vertical-align: sub;
+}
+
+.ul--orange li:before {
+  color: rgba(249, 185, 19, 0.8);
+}
+
+.icon {
+  width: 32px;
+}
+
+.icon--large {
+  width: 52px;
+}
+
+i {
+  cursor: pointer;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+  color: #000000;
+}
+
+i.fa-twitter {
+  color: #00aced;
+}
+
+i.fa-facebook-official {
+  color: #3b5998;
+}
+
+i.fa-soundcloud {
+  color: #ff3a00;
+}
+
+i.fa-instagram {
+  color: #bc2a8d;
+}
+
+i.fa-vk {
+  color: #45668e;
+}
+
+i.fa-youtube-play {
+  color: #bb0000;
+}
+
+i.fa-google-plus {
+  color: #D43402;
+}
+
+i.fa-envelope {
+  color: #dd4b39;
+}
+
+i.fa-mobile {
+  color: #fff;
+}
+
+.text-important {
+  display: inline-block;
+  padding: 5px 5px 10px;
+}
+
+.text-important--orange {
+  background-color: rgba(249, 185, 19, 0.8);
+}
+
+.heading--line-top :before {
+  content: '';
+  display: block;
+  background: rgba(249, 185, 19, 0.8);
+  height: 1px;
+  width: 150px;
+  margin: 25px auto;
+}
+
+.heading--line-bottom:after {
+  content: '';
+  display: block;
+  background: rgba(249, 185, 19, 0.8);
+  height: 1px;
+  width: 150px;
+  margin: 25px auto;
+}
+
+.heading-main {
+  text-align: center;
+}
+
+.heading-main__header {
+  margin-bottom: 25px;
+}
+
+.image-viewer {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 800px;
+}
+
+.image-viewer__image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+}
+
+.image-viewer__description {
+  text-align: center;
+}
+
+section#galery .galery {
+  background: #515151;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  section#galery .galery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+section#galery .galery__item {
+  width: 100%;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  section#galery .galery__item {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+}
+/*# sourceMappingURL=galery.css.map */

@@ -1,0 +1,61 @@
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin font-exo2() {
+    font-family: 'Exo 2', sans-serif;
+}
+
+@mixin font-montserat() {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin bg-img($url, $size) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $size;
+}
+
+@mixin flex() {
+    display: flex;
+}
+
+@mixin full-size() {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin pos($type, $top: null, $left: null) {
+    position: $type;
+    top: $top;
+
+    @if $top {
+        transform: translateY(-50%);
+    }
+
+    @if $left {
+        transform: translateX(-50%);
+    }
+}

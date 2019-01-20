@@ -1,0 +1,49 @@
+.text-important {
+    display: inline-block;
+    padding: 5px 5px 10px;
+
+    &--orange {
+        background-color: $orangeMain;
+    }
+}
+
+$head-mg: 25px;
+
+.heading {
+    &--line {
+        &-top {
+            :before {
+                content: '';
+                display: block;
+                background: $orangeMain;
+                height: 1px;
+                width: 150px;
+                margin: $head-mg auto;
+            }
+        }
+
+        &-bottom {
+            &:after {
+                content: '';
+                display: block;
+                background: $orangeMain;
+                height: 1px;
+                width: 150px;
+                margin: $head-mg auto;
+            }
+        }
+    }
+}
+
+.heading-main {
+    text-align: center;
+
+    &__header {
+        margin-bottom: $head-mg;
+    }
+
+    &__subheader {
+
+    }
+}
+

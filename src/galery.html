@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galery</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/initialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/galery.css">
+</head>
+<body>
+    <header id="header">
+        <div class="side-nav">
+            <div class="side-nav__close">&times;</div>
+            <nav class="menu">
+                <a href="/" class="menu__item">Home</a>
+                <a href="#About" class="menu__item">About</a>
+                <a href="/gallery.html" class="menu__item">Gallery</a>
+                <a href="#Contact" class="menu__item">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="galery">
+            <div class="galery">
+                <div class="galery__item">
+                    <img src="/project/static/img/hero.jpg" alt="This is hero" />
+                </div>
+                <div class="galery__item">
+                    <img src="/project/static/img/starboy.jpg" alt="This is starboy" />
+                </div>
+                <div class="galery__item">
+                    <img src="/project/static/img/contact.jpg" alt="This is contact" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <div id="imageViewer" class="modal">
+        <div class="modal__body">
+            <div class="image-viewer">
+                <div class="image-viewer__inner">
+                    <div class="image-viewer__image">
+                        <img src="/project/static/img/hero.jpg" alt="">
+                    </div>
+                    <div class="image-viewer__description">
+                        <span>The picture description</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__close">&times;</div>     
+    </div>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/imageViewer/index.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
