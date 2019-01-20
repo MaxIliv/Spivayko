@@ -2,7 +2,7 @@ section#hero {
     
     position: relative;
     min-height: 100vh;
-    @include bg-img('/static/img/hero.jpg', cover);
+    @include bg-img('../../static/img/hero.jpg', cover);
     @include font-montserat();
 
     .hero {

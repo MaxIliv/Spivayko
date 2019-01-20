@@ -297,7 +297,7 @@ i.fa-mobile {
 section#hero {
   position: relative;
   min-height: 100vh;
-  background-image: url("/static/img/hero.jpg");
+  background-image: url("../../static/img/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -339,7 +339,7 @@ section#hero .hero__content-inner {
 }
 
 section#about {
-  background-image: url("/static/img/music-notes.png");
+  background-image: url("../../static/img/music-notes.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
