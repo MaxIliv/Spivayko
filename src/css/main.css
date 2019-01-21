@@ -21,6 +21,35 @@ h4 {
 
 p {
   font-size: 14px;
+  line-height: 1.6;
+}
+
+.button-block {
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  color: rgba(0, 0, 0, 0.85);
+  background: #fefefe;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  font-size: 18px;
+}
+
+.btn--orange {
+  color: #fefefe;
+  background-color: rgba(249, 185, 19, 0.8);
+}
+
+.btn--orange:hover {
+  background-color: #f9b913;
+}
+
+.btn--lg {
+  padding: 15px 25px;
 }
 
 /*
@@ -28,6 +57,12 @@ p {
 */
 /*
     ===== PADDINGS END =====
+*/
+/*
+    ===== MARGINS =====
+*/
+/*
+    ===== MARGINS END =====
 */
 .container {
   max-width: 1024px;
@@ -37,7 +72,7 @@ p {
 
 @media only screen and (max-width: 1023px) {
   .container {
-    padding: 0 50px;
+    padding: 0 20px;
   }
 }
 
@@ -71,17 +106,21 @@ img {
   background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
 }
 
+.overlay--gradient-radial {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
+}
+
 a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(254, 254, 254, 0.8);
   text-decoration: none;
   display: inline-block;
-  padding: 0 0 5px;
+  padding: 5px 0 5px;
   margin: 0 10px;
   border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  color: #ffffff;
+  color: #fefefe;
   border-bottom: 1px solid rgba(249, 185, 19, 0.8);
 }
 
@@ -98,24 +137,19 @@ a:hover {
 }
 
 .ul--square li::before {
-  content: "\25aa";
-  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: red;
-  /* Change the color */
-  font-weight: bold;
-  /* If you want it to be bold */
+  content: "";
   display: inline-block;
   /* Needed to add space between the bullet and the text */
-  width: 1em;
-  /* Also needed for space (tweak if needed) */
+  width: 5px;
+  height: 5px;
   margin-left: -1em;
   /* Also needed for space (tweak if needed) */
-  font-size: 20px;
-  vertical-align: sub;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .ul--orange li:before {
-  color: rgba(249, 185, 19, 0.8);
+  background-color: rgba(249, 185, 19, 0.8);
 }
 
 .icon {
@@ -130,7 +164,7 @@ i {
   cursor: pointer;
   -webkit-transition: color 300ms ease;
   transition: color 300ms ease;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 i.fa-twitter {
@@ -178,13 +212,13 @@ i.fa-mobile {
   background-color: rgba(249, 185, 19, 0.8);
 }
 
-.heading--line-top :before {
+.heading--line-top:before {
   content: '';
   display: block;
   background: rgba(249, 185, 19, 0.8);
   height: 1px;
   width: 150px;
-  margin: 25px auto;
+  margin: 0 auto 25px;
 }
 
 .heading--line-bottom:after {
@@ -194,6 +228,18 @@ i.fa-mobile {
   height: 1px;
   width: 150px;
   margin: 25px auto;
+}
+
+.heading--mb-lg {
+  margin-bottom: 100px;
+}
+
+.heading--mb-md {
+  margin-bottom: 75px;
+}
+
+.heading--mb-sm {
+  margin-bottom: 50px;
 }
 
 .heading-main {
@@ -238,9 +284,10 @@ i.fa-mobile {
 }
 
 .nav {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   width: 100%;
+  background-color: transparent;
 }
 
 .nav--top {
@@ -248,12 +295,17 @@ i.fa-mobile {
 }
 
 .nav--bg {
-  background: #ffffff;
-  color: #000000;
+  -webkit-transition: background-color .3s linear;
+  transition: background-color .3s linear;
+  background-color: #fefefe;
+  color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  -webkit-box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
 .nav--bg a {
-  color: #000000;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .nav--bg .nav__logo-light {
@@ -285,6 +337,9 @@ i.fa-mobile {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px;
 }
 
@@ -325,7 +380,7 @@ section#hero .hero__content {
 }
 
 section#hero .hero__content h1, section#hero .hero__content h3 {
-  color: #ffffff;
+  color: #fefefe;
 }
 
 section#hero .hero__content h1 {
@@ -345,24 +400,35 @@ section#about {
   background-size: contain;
 }
 
-.info-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 100px;
+@media only screen and (min-width: 768px) {
+  .info-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .info-list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   margin-bottom: 50px;
-  padding-right: 55px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .info-list__item {
+    padding-right: 55px;
+  }
+}
+
+.info-list__item h3 {
+  margin-bottom: 5px;
 }
 
 .info-list__item h4 {
@@ -378,20 +444,31 @@ section#workWith {
   background-color: #f1f1f1;
 }
 
-.working-with {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media only screen and (min-width: 768px) {
+  .working-with {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .working-with__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .working-with__content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 0;
+  }
 }
 
 .working-with__half {
@@ -402,6 +479,13 @@ section#workWith {
 
 .working-with__item {
   text-align: center;
+  padding: 20px 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .working-with__item {
+    padding: 20px;
+  }
 }
 
 .working-with__item h3 {
@@ -412,9 +496,156 @@ section#workWith {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 767px) {
+  .working-with__img {
+    width: 100px;
+  }
+}
+
 .working-with__icon {
   max-width: 75px;
   margin: 0 auto 20px;
+}
+
+section#works {
+  position: relative;
+  background-image: url("../../static/img/music_video.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section#works h1, section#works h3 {
+  color: #fefefe;
+}
+
+section#works .container {
+  position: relative;
+  z-index: 1;
+}
+
+section#regards .regards-list {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section#regards .regards-list__item {
+  padding: 25px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  section#regards .regards-list__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3%;
+            flex: 0 0 33.3%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section#regards .regards-list__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+}
+
+section#regards .regards-list__item img {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .team__info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .team__list {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .team__list__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3%;
+            flex: 0 0 33.3%;
+    padding: 0 20px;
+  }
+}
+
+.team__list__item {
+  padding: 20px;
+}
+
+.member {
+  text-align: center;
+  overflow: hidden;
+}
+
+.member__photo {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .member {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  .member:hover .member__photo {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .member__photo {
+    -webkit-transform: scale(2.85);
+            transform: scale(2.85);
+    max-width: 75px;
+    -webkit-transition: -webkit-transform .3s linear;
+    transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+    transition: transform .3s linear, -webkit-transform .3s linear;
+  }
+}
+
+.social-list__item {
+  padding: 25px 10px 0;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.loader {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fefefe;
+  z-index: 20;
 }
 
 body {

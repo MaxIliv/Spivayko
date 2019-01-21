@@ -1,0 +1,13 @@
+section#works {
+    position: relative;
+    @include bg-img('../../static/img/music_video.jpg', cover);
+
+    h1, h3 {
+        color: $white;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}

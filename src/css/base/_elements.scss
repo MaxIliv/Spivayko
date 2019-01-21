@@ -4,7 +4,7 @@
     display: block;
 
     @include mq('tablet-wide', max) {
-        padding: 0 50px;
+        padding: 0 20px;
     }
 }
 
@@ -33,13 +33,17 @@ img {
     &--gradient {
         background-image: linear-gradient($black, rgba($black, .5), rgba($black, .3));
     }
+
+    &--gradient-radial {
+        background-image: radial-gradient($blackMain, rgba($black, .6));
+    }
 }
 
 a {
     color: rgba($white, .8);
     text-decoration: none;
     display: inline-block;
-    padding: 0 0 5px;
+    padding: 5px 0 5px;
     margin: 0 10px;
     border-bottom: 1px solid transparent;
 
@@ -60,20 +64,19 @@ a {
         list-style: none;
 
         li::before {
-            content: "\25aa";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-            color: red; /* Change the color */
-            font-weight: bold; /* If you want it to be bold */
+            content: ""; 
             display: inline-block; /* Needed to add space between the bullet and the text */ 
-            width: 1em; /* Also needed for space (tweak if needed) */
+            width: 5px;
+            height: 5px;
             margin-left: -1em; /* Also needed for space (tweak if needed) */
-            font-size: 20px;
-            vertical-align: sub;
+            vertical-align: middle;
+            margin-right: 10px;
         }
     }
 
     &--orange {
         li:before {
-            color: $orangeMain;
+            background-color: $orangeMain;
         }
     }
 }

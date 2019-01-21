@@ -1,0 +1,27 @@
+.button-block {
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    color: $blackMain;
+    background: $white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all .5s ease;
+    font-size: $fsh3;
+
+    &--orange {
+        color: $white;
+        background-color: $orangeMain;
+
+        &:hover {
+            background-color: $orange;
+        }
+    }
+
+    &--lg {
+        padding: 15px 25px;
+    }
+
+}

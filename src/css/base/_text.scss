@@ -12,13 +12,13 @@ $head-mg: 25px;
 .heading {
     &--line {
         &-top {
-            :before {
+            &:before {
                 content: '';
                 display: block;
                 background: $orangeMain;
                 height: 1px;
                 width: 150px;
-                margin: $head-mg auto;
+                margin: 0 auto $head-mg;
             }
         }
 
@@ -31,6 +31,21 @@ $head-mg: 25px;
                 width: 150px;
                 margin: $head-mg auto;
             }
+        }
+    }
+
+    &--mb {
+
+        &-lg {
+            margin-bottom: $mb-lg;
+        }
+
+        &-md {
+            margin-bottom: $mb-md;
+        }
+
+        &-sm {
+            margin-bottom: $mb-sm;
         }
     }
 }

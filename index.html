@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
+    <div class="loader"></div>
     <header>
         <nav class="nav nav--top">
             <div class="nav__inner">
@@ -60,7 +61,7 @@
         </section>
         <section id="about" class="section">
             <div class="container">
-                <div class="heading-main">
+                <div class="heading-main heading--mb-lg">
                     <h1 class="heading-main__header heading--line-bottom">Нам 15 років</h1>
                     <h2 class="heading-main__subheader">Студія Вокалу та Сценічної Майстерності</h2>
                 </div>
@@ -133,7 +134,7 @@
             <div class="container">
                 <div class="working-with">
                     <div class="working-with__half">
-                        <div class="heading-main">
+                        <div class="heading-main heading--mb-md">
                             <h1 class="heading-main__header heading--line-bottom">З ким ми працюємо?</h1>
                             <h2 class="heading-main__subheader">
                                 Заняття призначені як для дітей 
@@ -172,101 +173,116 @@
             </div>
         </section>
         <section id="works" class="section">
+            <div class="overlay overlay--gradient-radial">
+            </div>
             <div class="container">
-                <h1>Відеокліпи та Авторські пісні</h1>
-                <p>
-                    У нас крута команда композиторів
-                    та режисерів, які закохані в свою справу
-                </p>
+                <div class="heading-main heading--mb-sm">
+                    <h1 class="heading-main__header heading--line-bottom">Відеокліпи та Авторські пісні</h1>
+                    <h3>
+                        У нас крута команда композиторів
+                        та режисерів, які закохані в свою справу
+                    </h3>
+                </div>
                 <div class="button-block">
-                    <button class="btn btn--orange">Дізнатись Більше</button>
+                    <button class="btn btn--orange btn--lg">Дізнатись Більше</button>
                 </div>
             </div>
         </section>
         <section id="regards" class="section">
             <div class="container"> 
-                <h1 class="heading--line-top">Наші Досягнення</h1>
-                <p>
-                    Ми брали участь у відомих ТВ-шоу та
-                    лауреати міжнароних конкурсів
-                </p>
+                <div class="heading-main heading--mb-md">
+                    <h1 class="heading-main__header heading--line-top">Наші Досягнення</h1>
+                    <h3>
+                        Ми брали участь у відомих ТВ-шоу та
+                        лауреати міжнароних конкурсів
+                    </h3>
+                </div>
+
                 <div class="regards-list">
                     <div class="regards-list__item">
-                        <img src="static/img/show/golosdity.jpg" alt="Голос діти" />
+                        <img src="static/img/show/Junior_Eurovision_Song_Contest.png" alt="Голос діти" />
                     </div>
                     <div class="regards-list__item">
                         <img src="static/img/show/golosdity.jpg" alt="Голос діти" />
                     </div>
                     <div class="regards-list__item">
-                        <img src="static/img/show/golosdity.jpg" alt="Голос діти" />
+                        <img src="static/img/show/xfactor.jpg" alt="Голос діти" />
                     </div>
                     <div class="regards-list__item">
-                        <img src="static/img/show/golosdity.jpg" alt="Голос діти" />
+                        <img src="static/img/show/golos.png" alt="Голос діти" />
                     </div>
                     <div class="regards-list__item">
-                        <img src="static/img/show/golosdity.jpg" alt="Голос діти" />
+                        <img src="static/img/show/berlin.jpg" alt="Голос діти" />
                     </div>
                     <div class="regards-list__item">
-                        <img src="static/img/show/golosdity.jpg" alt="Голос діти" />
+                        <img src="static/img/show/praga.jpg" alt="Голос діти" />
                     </div>
                     <div class="regards-list__item">
-                        <img src="static/img/show/golosdity.jpg" alt="Голос діти" />
+                        <img src="static/img/show/folkmusic.jpeg" alt="Голос діти" />
                     </div>
                 </div>
             </div>
         </section>
         <section id="team" class="section">
             <div class="container">
-                <div class="article">
-                    <h3 class="article__header heading--line-right">Наша команда</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui dolorum reprehenderit tempore commodi cumque assumenda, corrupti tenetur soluta doloremque eligendi cum molestias voluptatem voluptate odit aperiam. Fuga, repellat explicabo!</p>
-                    <div class="button-block">
-                        <button class="btn btn--orange">Дізнатись більше Про Нас</button>
-                    </div>
-                </div>
-                <div class="team-list">
-                    <div class="team-list__item member">
-                        <h3 class="member__name">Тарас Лучанко</h3>
-                        <p class="member__position">Викладач</p>
-                        <div class="member__photo">
-                            <img src="static/img/team/Taras.jpg" alt="Taras">
-                        </div>
-                        <div class="member__social">
-                            <div class="social-list">
-                                <span class="social-list__item icon-facebook"></span>
-                                <span class="social-list__item icon-youtube"></span>
-                                <span class="social-list__item icon-twitter"></span>
-                                <span class="social-list__item icon-instagram"></span>
-                            </div>
+                <div class="team">
+                    <div class="team__info">
+                        <h3 class="article__header heading--line-right">Наша команда</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui dolorum reprehenderit tempore commodi cumque assumenda, corrupti tenetur soluta doloremque eligendi cum molestias voluptatem voluptate odit aperiam. Fuga, repellat explicabo!</p>
+                        <div class="button-block">
+                            <button class="btn btn--orange btn--lg">Дізнатись більше Про Нас</button>
                         </div>
                     </div>
-                    <div class="team-list__item member">
-                            <h3 class="member__name">Наташа Лучанко</h3>
-                            <p class="member__position">Викладач</p>
-                            <div class="member__photo">
-                                <img src="static/img/team/Natasha.jpg" alt="Natasha">
-                            </div>
-                            <div class="member__social">
-                                <div class="social-list">
-                                    <span class="social-list__item icon-facebook"></span>
-                                    <span class="social-list__item icon-youtube"></span>
-                                    <span class="social-list__item icon-twitter"></span>
-                                    <span class="social-list__item icon-instagram"></span>
+                    <div class="team__list">
+                        <div class="team__list__item">
+                            <div class="member">
+                                <h3 class="member__name">Тарас Лучанко</h3>
+                                <p class="member__position">Викладач</p>
+                                <div class="member__photo">
+                                    <img src="static/img/team/Taras.jpg" alt="Taras">
+                                </div>
+                                <div class="member__social">
+                                    <div class="social-list">
+                                        <span class="social-list__item icon-facebook"></span>
+                                        <span class="social-list__item icon-youtube"></span>
+                                        <span class="social-list__item icon-twitter"></span>
+                                        <span class="social-list__item icon-instagram"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    <div class="team-list__item member">
-                        <h3 class="member__name">Андрій Лучанко</h3>
-                        <p class="member__position">Викладач</p>
-                        <div class="member__photo">
-                            <img src="static/img/team/Andrew.jpg" alt="Andrew">
+                        <div class="team__list__item">
+                            <div class="member">
+                                <h3 class="member__name">Наташа Лучанко</h3>
+                                <p class="member__position">Викладач</p>
+                                <div class="member__photo">
+                                    <img src="static/img/team/Natasha.jpg" alt="Natasha">
+                                </div>
+                                <div class="member__social">
+                                    <div class="social-list">
+                                        <span class="social-list__item icon-facebook"></span>
+                                        <span class="social-list__item icon-youtube"></span>
+                                        <span class="social-list__item icon-twitter"></span>
+                                        <span class="social-list__item icon-instagram"></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="member__social">
-                            <div class="social-list">
-                                <span class="social-list__item icon-facebook"></span>
-                                <span class="social-list__item icon-youtube"></span>
-                                <span class="social-list__item icon-twitter"></span>
-                                <span class="social-list__item icon-instagram"></span>
+                        <div class="team__list__item ">
+                            <div class="member">
+                                <h3 class="member__name">Андрій Лучанко</h3>
+                                <p class="member__position">Викладач</p>
+                                <div class="member__photo">
+                                    <img src="static/img/team/Andrew.jpg" alt="Andrew">
+                                </div>
+                                <div class="member__social">
+                                    <div class="social-list">
+                                        <span class="social-list__item icon-facebook"></span>
+                                        <span class="social-list__item icon-youtube"></span>
+                                        <span class="social-list__item icon-twitter"></span>
+                                        <span class="social-list__item icon-instagram"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -305,7 +321,7 @@
     <footer>
         <div class="container"></div>
     </footer>
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
-    <!-- <script src="js/app.bundle.js"></script> -->
+    <script src="src/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>
