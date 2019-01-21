@@ -1,5 +1,7 @@
-.loader {
-    display: block;
+#loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,4 +9,61 @@
     bottom: 0;
     background-color: $white;
     z-index: 20;
+
+    .svg-piano {
+        &__key {
+            animation-name: pulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+
+            &:nth-child(2) {
+                animation-delay: 0s;
+            }
+            &:nth-child(3) {
+                animation-delay: .5s;
+            }
+            &:nth-child(4) {
+                animation-delay: 1s;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 1.5s;
+            }
+        }
+    }
+
+    &.loader--hide {
+        animation-name: fadeOut;
+        animation-duration: .5s;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        fill: $orange;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    26% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

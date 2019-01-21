@@ -2,7 +2,7 @@ var $window = $(window);
 var $body = $('body');
 var pieces = {
     header: $body.find('nav.nav'),
-    loader: $body.find('.loader')
+    loader: $body.find('#loader')
 };
 
 $window.on('scroll', function() {
@@ -11,7 +11,7 @@ $window.on('scroll', function() {
 
 (function() {
     checkHeader();
-    hideLoader();    
+    hideLoader();
 })();
 
 function checkHeader() {
@@ -33,5 +33,6 @@ function checkHeader() {
 }
 
 function hideLoader() {
-    setTimeout(() => pieces.loader.hide(), 400);
+    setTimeout(() => pieces.loader.addClass('loader--hide'), 1000);
+    setTimeout(() => { pieces.loader.hide().removeClass('loader--hide'); }, 1500);
 }
