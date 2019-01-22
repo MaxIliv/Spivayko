@@ -1,5 +1,9 @@
 .button-block {
     text-align: center;
+
+    .btn {
+        width: auto;
+    }
 }
 
 .btn {
@@ -7,9 +11,13 @@
     color: $blackMain;
     background: $white;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all .5s ease;
-    font-size: $fsh3;
+    padding: 10px 15px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 300px;
+    display: block;
 
     &--orange {
         color: $white;
@@ -20,8 +28,10 @@
         }
     }
 
+
     &--lg {
         padding: 15px 25px;
+        font-size: $fsh3;    
     }
 
 }

@@ -4,19 +4,28 @@ section#team {
 
 .team {
 
-    @include mq('tablet-wide') {
-        @include flex();
+    &__info {
+        margin-bottom: 15px;
+    }
 
-        &__info {
-            flex: 0 0 25%;
-        }
+    &__info-content {
+        padding-right: 20px;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+    }
+
+    &__header {
+        margin-bottom: 15px;
+        font-size: $fsh2;
     }
 
 
     &__list {
 
         &__item {
-            padding: $pd-md;
+            padding: $pd * 1.5;
         }
 
         @include mq('tablet-wide') { 
@@ -29,14 +38,28 @@ section#team {
                 padding: 0 $pd-md;
             }
         }
-
-
     }
+
+    @include mq('tablet-wide') {
+        @include flex();
+
+        &__info {
+            flex: 0 0 25%;
+        }
+    }
+
+    
 }
+
 
 .member {
     text-align: center;
     overflow: hidden;
+    margin-bottom: $mg * 2;
+
+    &__position {
+        margin-bottom: $mg;
+    }
     
     &__photo {
         max-width: 250px;
@@ -50,6 +73,7 @@ section#team {
     @include mq('tablet-wide') {
         background-color: $gray;
         padding: 20px;
+        margin-bottom: 0;
 
         &:hover {
             .member__photo {
@@ -58,7 +82,7 @@ section#team {
         }
     
         &__photo {
-            transform: scale(2.85);
+            transform: scale(3);
             max-width: 75px;
             transition: transform .3s linear;
         }

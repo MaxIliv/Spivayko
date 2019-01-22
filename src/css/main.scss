@@ -7,6 +7,7 @@
 @import "works/index";
 @import "regards/index";
 @import "team/index";
+@import "contacts/index";
 @import "loader";
 
 // @import "modal/index";
@@ -18,7 +19,11 @@ body {
 
     @include font-exo2();
 
-    &.side-nav--opened, &.modal--opened {
+    &.side-nav--opened, &.modal--opened, &.loading {
         overflow: hidden;
     }
+}
+
+footer {
+    background-color: $gray-dark;
 }

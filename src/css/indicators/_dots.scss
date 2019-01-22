@@ -6,7 +6,7 @@ $margin: $size-lg 0;
     width: 10px;
     text-align: center;
     @include pos(fixed, 50%);
-    right: $size-lg * 2;
+    right: $size-lg * 3;
     z-index: 2;
 
 
@@ -28,6 +28,7 @@ $margin: $size-lg 0;
         margin: $margin;
         display: inline-block;
         cursor: pointer;
+        transition: all .3s linear;
 
         &--active {
             width: $size-lg;

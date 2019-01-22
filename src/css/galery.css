@@ -8,11 +8,12 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h3 {
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 h4 {
@@ -28,15 +29,23 @@ p {
   text-align: center;
 }
 
+.button-block .btn {
+  width: auto;
+}
+
 .btn {
   border: none;
   color: rgba(0, 0, 0, 0.85);
   background: #fefefe;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 2px;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
-  font-size: 18px;
+  padding: 10px 15px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 300px;
+  display: block;
 }
 
 .btn--orange {
@@ -50,6 +59,7 @@ p {
 
 .btn--lg {
   padding: 15px 25px;
+  font-size: 18px;
 }
 
 /*
@@ -111,16 +121,23 @@ img {
 }
 
 a {
-  color: rgba(254, 254, 254, 0.8);
+  color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
   display: inline-block;
   padding: 5px 0 5px;
-  margin: 0 10px;
   border-bottom: 1px solid transparent;
+  margin: 0 10px;
+}
+
+a.a--no-mg {
+  margin: 0;
+}
+
+a.a--no-underline {
+  border-bottom: transparent !important;
 }
 
 a:hover {
-  color: #fefefe;
   border-bottom: 1px solid rgba(249, 185, 19, 0.8);
 }
 
@@ -150,6 +167,35 @@ a:hover {
 
 .ul--orange li:before {
   background-color: rgba(249, 185, 19, 0.8);
+}
+
+.orange-brick {
+  display: none;
+  background-color: #f9b913;
+  width: 350px;
+  height: 150px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.orange-brick--top-left {
+  top: 50px;
+  left: 50px;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media only screen and (min-width: 1024px) {
+  .orange-brick {
+    display: block;
+  }
+}
+
+.flex--half {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 
 .icon {
@@ -228,6 +274,21 @@ i.fa-mobile {
   height: 1px;
   width: 150px;
   margin: 25px auto;
+}
+
+.heading--line-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.heading--line-right:after {
+  content: '';
+  background: #f1f1f1;
+  height: 1px;
+  width: 100%;
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
 }
 
 .heading--mb-lg {

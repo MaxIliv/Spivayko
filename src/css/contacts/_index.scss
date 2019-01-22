@@ -1,0 +1,13 @@
+section#contacts {
+
+}
+
+.contacts {
+    a {
+        margin: 0;
+    }
+
+    &__content {
+        @include flex();
+    }
+}

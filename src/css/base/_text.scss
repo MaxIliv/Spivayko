@@ -32,6 +32,21 @@ $head-mg: 25px;
                 margin: $head-mg auto;
             }
         }
+
+        &-right {
+            position: relative;
+            overflow: hidden;
+
+            &:after {
+                content: '';
+                background: $gray;
+                height: 1px;
+                width: 100%;
+                margin-left: 10px;
+                position: absolute;
+                top: 50%;
+            }
+        }
     }
 
     &--mb {

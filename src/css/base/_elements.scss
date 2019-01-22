@@ -44,8 +44,16 @@ a {
     text-decoration: none;
     display: inline-block;
     padding: 5px 0 5px;
-    margin: 0 10px;
     border-bottom: 1px solid transparent;
+    margin: 0 10px;
+
+    &.a--no-mg {
+        margin: 0;
+    }
+
+    &.a--no-underline {
+        border-bottom: transparent !important;
+    }
 
     &:hover {
         border-bottom: 1px solid $orangeMain;        
@@ -78,4 +86,29 @@ a {
             background-color: $orangeMain;
         }
     }
+}
+
+.orange-brick {
+    display: none;
+    background-color: $orange;
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    &--top {
+        &-left {
+            top: 50px;
+            left: 50px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    @include mq('tablet-wide') {
+        display: block;
+    }
+}
+
+.flex--half {
+    flex: 0 0 50%;
 }

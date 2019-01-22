@@ -3,13 +3,32 @@
     z-index: 10;
     width: 100%;
     background-color: transparent;
-    
+
+    a {
+        margin-right: 20px;
+    }
+
     &--top {
         top: 20px;
+
+        a {
+            &.a--higlighted {
+                background-color: rgba($orange, .3);
+                color: $white;
+                border: 1px solid $orangeMain;
+                border-radius: 25px;
+                padding: 8px 25px;
+
+                &:hover {
+                    background-color: $orangeMain;                    
+                }
+            }
+        }
     }
     
     &__logo {
         cursor: pointer;
+        max-width: 100px;
 
         &-light {
             display: block;
@@ -40,28 +59,62 @@
             }
         }
     }
+}
 
-    &--bg {
-        transition: background-color .3s linear;
-        background-color: $white;
-        color: $blackMain;
-        position: fixed;
-        box-shadow: 0px -4px 20px 0px rgba($black, 0.5);
+.social-nav {
+    position: fixed;
+    left: 30px;
+    top: 100px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity .3s linear, transform .5s linear;
+    transform: translateX(-100px);
+    
+    @include mq('tablet-wide', max) {
+        display: none;
+    }
 
-        a {
+    &__item {
+        display: block;
+        font-size: $fsh3;
+        margin-bottom: $mg;
+    }
+}
+
+
+header {
+
+    
+    &.nav--fixed {
+        .nav {
+            transition: background-color .3s linear;
+            background-color: $white;
             color: $blackMain;
-
-            &:hover {
-                color: $black;
+            position: fixed;
+            box-shadow: 0px -4px 20px 0px rgba($black, 0.5);
+    
+            &__inner {
+                a {
+                    color: $blackMain;
+        
+                    &:hover {
+                        color: $black;
+                    }
+                }
+        
+            }
+            &__logo-light {
+                display: none;
+            }
+    
+            &__logo-dark {
+                display: block;
             }
         }
 
-        .nav__logo-light {
-            display: none;
-        }
-
-        .nav__logo-dark {
-            display: block;
+        .social-nav {
+            opacity: 1;
+            transform: translateX(0%)
         }
     }
 }
