@@ -800,10 +800,12 @@ section#regards .regards-list__item img {
   margin: 0;
 }
 
-.contacts__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media only screen and (min-width: 768px) {
+  .contacts__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #loader {
