@@ -8,6 +8,8 @@ section#contacts {
     }
 
     &__content {
-        @include flex();
+        @include mq('tablet') {
+            @include flex();
+        }
     }
 }
