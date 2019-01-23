@@ -8,9 +8,12 @@ section#workWith {
     }
 
     &__content {
-        @include flex();
-        justify-content: center;
         margin-bottom: $mb-xs;
+
+        @include mq('tablet-small') {
+            @include flex();
+            justify-content: center;
+        }
 
         @include mq('tablet') {
             justify-content: space-between;
@@ -19,7 +22,7 @@ section#workWith {
     }
 
     &__half {
-        flex: 50%;
+        flex: 0 0 50%;
     }
 
     &__item {

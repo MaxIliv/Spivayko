@@ -1,21 +1,46 @@
 section#galery {
+    background: $gray;
+}
 
-    .galery {
-        background: $dark;
-        padding: 20px;
-        @media screen and (min-width: 768px) {
-            display: flex;
-        }        
+.galery {
+    $self: &;
 
-        &__item {
+    &__container {
+        margin: 0 auto;
+        max-width: 950px;
+    }
+
+    &__item {
+        padding: $pd * 2;
+        opacity: .8;
+        transition: all .3s linear;
+
+        img {
             width: 100%;
-            padding: 20px;
-
-            @media screen and (min-width: 768px) {
-                flex-grow: 2;
-            }
         }
     }
 
+    .slick-center {
+        #{ $self }__item {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
 
+    .slick-slide {
+        outline: none;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        color: $orangeMain;
+        font-size: 36px;
+    }
+
+    .slick-prev {
+        left: -40px;
+    }
+
+    .slick-next {
+        right: -40px;
+    }
 }

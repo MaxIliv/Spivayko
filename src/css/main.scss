@@ -1,4 +1,5 @@
 @import "base/index";
+@import "loader";
 @import "indicators/index";
 @import "nav/index";
 @import "hero/index";
@@ -8,11 +9,8 @@
 @import "regards/index";
 @import "team/index";
 @import "contacts/index";
-@import "loader";
-
-// @import "modal/index";
-// @import "sideNav/index";
-
+@import "galery/index";
+@import "banner/index";
 
 body {
     font-size: $fs;

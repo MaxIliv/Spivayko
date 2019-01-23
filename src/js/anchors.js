@@ -1,5 +1,15 @@
-(function() {
-    $('a.anchor-link').on('click', smoothScroll);
+var anchorScroll = (function() {
+    var _$anchors = $('a.anchor-link');
+    
+    init();
+
+    function init() {
+        subscribeEvents();
+    }
+
+    function subscribeEvents() {
+        _$anchors.on('click', smoothScroll);
+    }
 
     function smoothScroll(e) {
         e.preventDefault();
@@ -14,5 +24,9 @@
                 }, 1000, function() {});
             }
         }
+    };
+
+    return {
+
     };
 })();

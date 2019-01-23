@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 32px;
+  margin-bottom: 25px;
 }
 
 h2 {
@@ -48,6 +49,15 @@ p {
   display: block;
 }
 
+.btn--dark {
+  color: #fefefe;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.btn--dark:hover {
+  background-color: #515151;
+}
+
 .btn--orange {
   color: #fefefe;
   background-color: rgba(249, 185, 19, 0.8);
@@ -60,6 +70,7 @@ p {
 .btn--lg {
   padding: 15px 25px;
   font-size: 18px;
+  min-width: 200px;
 }
 
 /*
@@ -124,25 +135,30 @@ a {
   color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
   display: inline-block;
+}
+
+a.link {
   padding: 5px 0 5px;
   border-bottom: 1px solid transparent;
   margin: 0 10px;
 }
 
-a.a--no-mg {
+a.link--no-mg {
   margin: 0;
 }
 
-a.a--no-underline {
+a.link--no-underline {
   border-bottom: transparent !important;
 }
 
-a:hover {
+a.link:hover {
   border-bottom: 1px solid rgba(249, 185, 19, 0.8);
 }
 
-.ul {
-  text-align: left;
+@media only screen and (min-width: 640px) {
+  .ul {
+    text-align: left;
+  }
 }
 
 .ul li {
@@ -331,29 +347,46 @@ i.fa-mobile {
   text-align: center;
 }
 
-section#galery .galery {
-  background: #515151;
+section#galery {
+  background: #f1f1f1;
+}
+
+.galery__container {
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+.galery__item {
   padding: 20px;
+  opacity: .8;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
-@media screen and (min-width: 768px) {
-  section#galery .galery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-section#galery .galery__item {
+.galery__item img {
   width: 100%;
-  padding: 20px;
 }
 
-@media screen and (min-width: 768px) {
-  section#galery .galery__item {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-  }
+.galery .slick-center .galery__item {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.galery .slick-slide {
+  outline: none;
+}
+
+.galery .slick-prev:before, .galery .slick-next:before {
+  color: rgba(249, 185, 19, 0.8);
+  font-size: 36px;
+}
+
+.galery .slick-prev {
+  left: -40px;
+}
+
+.galery .slick-next {
+  right: -40px;
 }
 /*# sourceMappingURL=galery.css.map */

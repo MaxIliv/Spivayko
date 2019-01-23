@@ -64,6 +64,10 @@ section#team {
     &__photo {
         max-width: 250px;
         margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
     }
     
     &__social {

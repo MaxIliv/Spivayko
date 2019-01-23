@@ -3,10 +3,11 @@ $size-lg: 10px;
 $margin: $size-lg 0;
 
 .dots {
-    width: 10px;
+    $self: &;
+    width: 30px;
     text-align: center;
     @include pos(fixed, 50%);
-    right: $size-lg * 3;
+    right: $size-lg * 1.5;
     z-index: 2;
 
 
@@ -19,26 +20,30 @@ $margin: $size-lg 0;
     
     }
 
+    &__wrap {
+        padding: $pd;
+        cursor: pointer;
+
+        &:hover {
+            #{ $self }__item {
+                background-color: $orangeMain;    
+            }
+        }
+    }
+
     &__item {
         width: $size-sm;
         height: $size-sm;
         border-radius: 50%;
         background: $gray-dark;
         border: 1px solid transparent;
-        margin: $margin;
         display: inline-block;
-        cursor: pointer;
         transition: all .3s linear;
 
         &--active {
-            width: $size-lg;
-            height: $size-lg;
+            transform: scale(2);
             background: none;
             border: 1px solid $orangeMain;
-        }
-
-        &:hover {
-            background-color: $orangeMain;
         }
     }
 }

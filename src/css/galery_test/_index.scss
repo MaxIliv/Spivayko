@@ -1,0 +1,21 @@
+section#galery {
+
+    .galery {
+        background: $dark;
+        padding: 20px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }        
+
+        &__item {
+            width: 100%;
+            padding: 20px;
+
+            @media screen and (min-width: 768px) {
+                flex-grow: 2;
+            }
+        }
+    }
+
+
+}

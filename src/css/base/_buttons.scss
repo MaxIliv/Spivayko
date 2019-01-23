@@ -19,6 +19,15 @@
     max-width: 300px;
     display: block;
 
+    &--dark {
+        color: $white;
+        background-color: $dark80;
+
+        &:hover {
+            background-color: $dark;
+        }
+    }
+
     &--orange {
         color: $white;
         background-color: $orangeMain;
@@ -32,6 +41,7 @@
     &--lg {
         padding: 15px 25px;
         font-size: $fsh3;    
+        min-width: 200px;
     }
 
 }

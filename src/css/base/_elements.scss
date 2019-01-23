@@ -43,25 +43,30 @@ a {
     color: $blackMain;
     text-decoration: none;
     display: inline-block;
-    padding: 5px 0 5px;
-    border-bottom: 1px solid transparent;
-    margin: 0 10px;
+    
+    &.link {      
+        padding: 5px 0 5px;
+        border-bottom: 1px solid transparent;
+        margin: 0 10px;
+        
+        &--no-mg {
+            margin: 0;
+        }
 
-    &.a--no-mg {
-        margin: 0;
-    }
+        &--no-underline {
+            border-bottom: transparent !important;
+        }
 
-    &.a--no-underline {
-        border-bottom: transparent !important;
-    }
-
-    &:hover {
-        border-bottom: 1px solid $orangeMain;        
+        &:hover {
+            border-bottom: 1px solid $orangeMain;        
+        }
     }
 }
 
 .ul {
-    text-align: left;
+    @include mq('tablet-small') {
+        text-align: left;
+    }
 
     li {
         line-height: 1.2;

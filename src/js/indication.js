@@ -17,15 +17,16 @@ var dotsManager = (function () {
 
     function createIndicators() {
         for (let i = 0; i < _count; i++) {
-            makeDot();
+            makeDot(_sections[i].id);
         }
 
         _$container.append(_$dots);
     }
 
-    function makeDot(params) {
-        var $wrap = $('<div />', {
-            class: 'dots__wrap'
+    function makeDot(id) {
+        var $wrap = $('<a />', {
+            class: 'dots__wrap anchor-link',
+            href: '#' + id
         });
 
         var $dot = $('<div />', {

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/initialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,700|Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/css/vendor/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="src/css/vendor/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.1/viewer.min.css">
     <link rel="stylesheet" href="fonts/social/social.css">
     <link rel="stylesheet" href="src/css/main.css">
 </head>
@@ -19,7 +22,7 @@
         <nav class="nav nav--top">
             <div class="nav__inner">
                 <div>
-                    <a class="anchor-link a--no-underline" href="#hero">
+                    <a class="anchor-link" href="#hero">
                         <span class="nav__logo nav__logo-light">
                             <img src="static/logo.png" alt="">
                         </span>
@@ -29,21 +32,21 @@
                     </a>
                 </div>
                 <div class="nav__right">
-                    <a class="anchor-link" href="#about">Про нас</a>
-                    <a class="anchor-link" href="#team">Команда</a>
-                    <a class="anchor-link" href="#galery">Галерея</a>
+                    <a class="link anchor-link" href="#about">Про нас</a>
+                    <a class="link anchor-link" href="#team">Команда</a>
+                    <a class="link anchor-link" href="#galery">Галерея</a>
                     <span class="">
-                        <a class="a--higlighted anchor-link" href="#contacts">Контакти</a>
+                        <a class="link a--higlighted anchor-link" href="#contacts">Контакти</a>
                     </span>
                 </div>
             </div>
         </nav>
         <div class="social-nav">
             <div class="social-nav__list">
-                    <a class="social-nav__item" href="#"><span class="icon-facebook"></span></a>
-                    <a class="social-nav__item" href="#"><span class=" icon-youtube"></span></a>
-                    <a class="social-nav__item" href="#"><span class="icon-twitter"></span></a>
-                    <a class="social-nav__item" href="#"><span class="icon-instagram"></span></a>
+                    <a class="link social-nav__item" href="#"><span class="icon-facebook"></span></a>
+                    <a class="link social-nav__item" href="#"><span class=" icon-youtube"></span></a>
+                    <a class="link social-nav__item" href="#"><span class="icon-twitter"></span></a>
+                    <a class="link social-nav__item" href="#"><span class="icon-instagram"></span></a>
                 </div>
         </div>
     </header>
@@ -249,10 +252,10 @@
                                 </div>
                                 <div class="member__social">
                                     <div class="social-list">
-                                        <a href="#"><span class="social-list__item icon-facebook"></span></a>
-                                        <a href="#"><span class="social-list__item icon-youtube"></span></a>
-                                        <a href="#"><span class="social-list__item icon-twitter"></span></a>
-                                        <a href="#"><span class="social-list__item icon-instagram"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-facebook"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-youtube"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-twitter"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-instagram"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -266,10 +269,10 @@
                                 </div>
                                 <div class="member__social">
                                     <div class="social-list">
-                                        <a href="#"><span class="social-list__item icon-facebook"></span></a>
-                                        <a href="#"><span class="social-list__item icon-youtube"></span></a>
-                                        <a href="#"><span class="social-list__item icon-twitter"></span></a>
-                                        <a href="#"><span class="social-list__item icon-instagram"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-facebook"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-youtube"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-twitter"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-instagram"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -283,10 +286,10 @@
                                 </div>
                                 <div class="member__social">
                                     <div class="social-list">
-                                        <a href="#"><span class="social-list__item icon-facebook"></span></a>
-                                        <a href="#"><span class="social-list__item icon-youtube"></span></a>
-                                        <a href="#"><span class="social-list__item icon-twitter"></span></a>
-                                        <a href="#"><span class="social-list__item icon-instagram"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-facebook"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-youtube"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-twitter"></span></a>
+                                        <a class="link" href="#"><span class="social-list__item icon-instagram"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -295,11 +298,38 @@
                 </div>
             </div>
         </section>
+        <div class="banner">
+            <h1>Отримай перше заняття безкоштовно!</h1>
+            <a class="anchor-link" href="#contacts">
+                <button class="btn btn--dark btn--lg">Записатись</button>
+            </a>
+        </div>
         <section id="galery" class="section">
             <div class="container">
-                <h1>Galery</h1>
                 <div class="galery">
-    
+                    <div class="heading-main heading--mb-sm">
+                        <h1 class="heading-main__header heading--line-bottom">Галерея</h1>
+                    </div>
+                    <div class="galery__container slick-init">
+                        <div class="galery__item">
+                            <img src="static/img/team/Taras.jpg" alt="">
+                        </div>
+                        <div class="galery__item">
+                            <img src="static/img/team/Andrew.jpg" alt="">
+                        </div>
+                        <div class="galery__item">
+                            <img src="static/img/team/Natasha.jpg" alt="">
+                        </div>
+                        <div class="galery__item">
+                            <img src="static/img/team/Taras.jpg" alt="">
+                        </div>
+                        <div class="galery__item">
+                            <img src="static/img/team/Andrew.jpg" alt="">
+                        </div>
+                        <div class="galery__item">
+                            <img src="static/img/team/Natasha.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -311,15 +341,15 @@
                     </div>
                     <div class="contacts__content">
                         <div class="contacts__item contacts__text flex--half">
-                            <h3><a target="_blank" href="https://goo.gl/maps/QGn2fMeEpio">м.Київ, проспект Лобановського 6 (ліцей №144)</a></h3>
+                            <h3><a class="link" target="_blank" href="https://goo.gl/maps/QGn2fMeEpio">м.Київ, проспект Лобановського 6 (ліцей №144)</a></h3>
                             <div class="contacts__item contacts__phone">
                                 <h3>
-                                    тел: <a href="tel:050-528-22-24">050-528-22-24</a>
+                                    тел: <a class="link" href="tel:050-528-22-24">050-528-22-24</a>
                                     <br />
-                                    <a href="tel:093-113-58-61">093-113-58-61</a>
+                                    <a class="link" href="tel:093-113-58-61">093-113-58-61</a>
                                 </h3>
                             </div>
-                            <h3 class="contacts__item">email: <a href="mailto:spivaykobest@gmail.com">spivaykobest@gmail.com</a></h3>
+                            <h3 class="contacts__item">email: <a class="link" href="mailto:spivaykobest@gmail.com">spivaykobest@gmail.com</a></h3>
                         </div>
                         <div class="contacts__map flex--half">
                             <a target="_blank" href="https://goo.gl/maps/QGn2fMeEpio">
@@ -334,10 +364,12 @@
     <footer>
         <div class="container"></div>
     </footer>
-    <script src="src/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="src/js/jquery-extend.js"></script>
-    <script src="src/js/indication.js"></script>
-    <script src="src/js/anchors.js"></script>
-    <script src="src/js/main.js"></script>
+    <script type="text/javascript" src="src/js/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="src/js/jquery-extend.js"></script>
+    <script type="text/javascript" src="src/js/vendor/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.1/viewer.min.js"></script>
+    <script type="text/javascript" src="src/js/indication.js"></script>
+    <script type="text/javascript" src="src/js/anchors.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
 </body>
 </html>
