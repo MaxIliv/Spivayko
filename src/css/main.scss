@@ -23,5 +23,36 @@ body {
 }
 
 footer {
-    background-color: $gray-dark;
+    background-color: #262626;
+    color: $gray;
+    padding: 50px 0 20px;
+
+    .footer {
+        &__content {
+
+        }
+
+        &__logo {
+            img {
+                margin: 0 auto;
+
+                @include mq('tablet') {
+                    display: inline-block;
+                }
+            }
+        }
+        
+        &__item {
+            margin-bottom: 35px;
+        }
+
+        &__copy {
+            color: $blackMain;
+        }
+
+        .flex--half {
+            text-align: center;
+        }
+    }
+
 }

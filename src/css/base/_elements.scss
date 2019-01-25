@@ -43,6 +43,7 @@ a {
     color: $blackMain;
     text-decoration: none;
     display: inline-block;
+    transition: all .3s linear;
     
     &.link {      
         padding: 5px 0 5px;
@@ -114,6 +115,16 @@ a {
     }
 }
 
-.flex--half {
-    flex: 0 0 50%;
+@include mq('tablet') {
+    .flex {
+        @include flex();
+    }
+    
+    .flex--half {
+        flex: 0 0 50%;
+    }
+}
+
+.text-center {
+    text-align: center;
 }

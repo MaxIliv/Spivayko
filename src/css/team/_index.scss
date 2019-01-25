@@ -98,4 +98,22 @@ section#team {
         display: inline-block;
         font-size: 18px;
     }
+
+    &--gray {
+        a {
+            color: $gray;
+        }
+    }
+
+    &--orange {
+        a {
+            color: $orangeMain;
+        }
+    }
+
+    &--wide {
+        a.link {
+            margin: 0 25px;
+        }
+    }
 }

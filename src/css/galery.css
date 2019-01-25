@@ -135,6 +135,8 @@ a {
   color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
   display: inline-block;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 a.link {
@@ -208,10 +210,21 @@ a.link:hover {
   }
 }
 
-.flex--half {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+@media only screen and (min-width: 768px) {
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .flex--half {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+
+.text-center {
+  text-align: center;
 }
 
 .icon {

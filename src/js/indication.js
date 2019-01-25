@@ -6,7 +6,7 @@ var dotsManager = (function () {
     var _$dots = [];
     var _activeIndex = 0;
     var _activeClass = 'dots__item--active';
-    var _shift = $(window).height() / 2;
+    var _shift = $(window).height() / 4;
 
     init();
 

@@ -135,6 +135,8 @@ a {
   color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
   display: inline-block;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 a.link {
@@ -208,10 +210,21 @@ a.link:hover {
   }
 }
 
-.flex--half {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+@media only screen and (min-width: 768px) {
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .flex--half {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+
+.text-center {
+  text-align: center;
 }
 
 .icon {
@@ -559,7 +572,7 @@ i.fa-mobile {
   }
 }
 
-.social-nav__item {
+.social-nav a.social-nav__item {
   display: block;
   font-size: 18px;
   margin-bottom: 10px;
@@ -639,6 +652,29 @@ section#hero .hero__content h1 {
 
 section#hero .hero__content-inner {
   max-width: 300px;
+}
+
+section#hero .hero__scroll {
+  position: absolute;
+  bottom: 75px;
+  left: 50px;
+}
+
+section#hero .hero__scroll-text {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: #fefefe;
+  font-size: 10px;
+  margin-bottom: 16px;
+  line-height: 15px;
+}
+
+section#hero .hero__scroll-arrow {
+  stroke: #fefefe;
+  width: 15px;
 }
 
 section#about {
@@ -929,6 +965,18 @@ section#regards .regards-list__item img {
   font-size: 18px;
 }
 
+.social-list--gray a {
+  color: #f1f1f1;
+}
+
+.social-list--orange a {
+  color: rgba(249, 185, 19, 0.8);
+}
+
+.social-list--wide a.link {
+  margin: 0 25px;
+}
+
 .contacts a {
   margin: 0;
 }
@@ -988,8 +1036,12 @@ section#galery {
   background-color: #f9b913;
   color: #fefefe;
   font-size: bold;
-  padding: 70px 30px;
+  padding: 100px 30px;
   text-align: center;
+}
+
+.banner__message {
+  margin-bottom: 35px;
 }
 
 body {
@@ -1002,6 +1054,30 @@ body.side-nav--opened, body.modal--opened, body.loading {
 }
 
 footer {
-  background-color: #545454;
+  background-color: #262626;
+  color: #f1f1f1;
+  padding: 50px 0 20px;
+}
+
+footer .footer__logo img {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  footer .footer__logo img {
+    display: inline-block;
+  }
+}
+
+footer .footer__item {
+  margin-bottom: 35px;
+}
+
+footer .footer__copy {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+footer .footer .flex--half {
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

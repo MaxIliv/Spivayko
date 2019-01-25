@@ -25,5 +25,25 @@ section#hero {
                 max-width: 300px;
             }
         }
+
+        &__scroll {
+            position: absolute;
+            bottom: 75px;
+            left: 50px;
+
+            &-text {
+                writing-mode: tb-rl;
+                transform: rotate(-180deg);
+                color: $white;
+                font-size: 10px;
+                margin-bottom: 16px;
+                line-height: 15px;
+            }
+        
+            &-arrow {
+                stroke: $white;
+                width: 15px;
+            }
+        }
     }
 }
