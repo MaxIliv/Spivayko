@@ -874,12 +874,6 @@ section#works #worksVideo {
   display: none;
 }
 
-@media screen and (min-width: 1360px) {
-  section#works #worksVideo {
-    width: 100%;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   section#works #worksVideo {
     display: block;
