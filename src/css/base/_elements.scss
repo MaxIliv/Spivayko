@@ -2,10 +2,8 @@
     max-width: 1024px;
     margin: 0 auto;
     display: block;
-
-    @include mq('tablet-wide', max) {
-        padding: 0 20px;
-    }
+    width: 100%;
+    padding: 0 40px;
 }
 
 .section {
@@ -60,6 +58,10 @@ a {
 
         &:hover {
             border-bottom: 1px solid $orangeMain;        
+        }
+
+        &--light {
+            color: #dddddd; 
         }
     }
 }

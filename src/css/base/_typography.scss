@@ -3,9 +3,9 @@ $fsh4: 16px;
 $fsh3: 18px;
 $fsh2: 22px;
 $fsh1: 32px;
-$fs-hero-lg: 60px;
-$fs-hero-lg: 60px;
- 
+$fs-hero-lg: 48px;
+$hero-mg: 18px;
+
 h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
@@ -34,3 +34,8 @@ p {
     line-height: 1.6;
 }
 
+
+@include mq('tablet-small') {
+    $fs-hero-lg: 60px;
+    $hero-mg: 25px;
+}

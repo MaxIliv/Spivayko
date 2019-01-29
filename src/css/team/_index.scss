@@ -76,7 +76,7 @@ section#team {
 
     @include mq('tablet-wide') {
         background-color: $gray;
-        padding: 20px;
+        padding: 15px;
         margin-bottom: 0;
 
         &:hover {
@@ -113,7 +113,12 @@ section#team {
 
     &--wide {
         a.link {
-            margin: 0 25px;
+            margin: 15px 20px;
+
+            .social-list__item {
+                font-size: 24px;
+            }
+            
         }
     }
 }

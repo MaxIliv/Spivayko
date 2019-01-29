@@ -1,6 +1,13 @@
 section#works {
     position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
     @include bg-img('../../static/img/music_video.jpg', cover);
+
+    @include mq('tablet') {
+        min-height: 600px;
+    }
 
     h1, h3 {
         color: $white;
@@ -9,5 +16,23 @@ section#works {
     .container {
         position: relative;
         z-index: 1;
+    }
+
+    #worksVideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        display: none;
+
+        @media screen and (min-width: 1360px) {
+            width: 100%;
+        }
+
+        @include mq('tablet') {
+            display: block;
+        }
     }
 }

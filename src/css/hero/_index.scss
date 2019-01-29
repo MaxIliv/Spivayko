@@ -1,7 +1,8 @@
 section#hero {
     
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 768px;
     @include bg-img('../../static/img/hero.jpg', cover);
     @include font-montserat();
 
@@ -18,7 +19,7 @@ section#hero {
             h1 {
                 font-weight: bold;
                 font-size: $fs-hero-lg;
-                margin: 25px 0;
+                margin: $hero-mg 0;
             }
             
             &-inner {
@@ -29,7 +30,16 @@ section#hero {
         &__scroll {
             position: absolute;
             bottom: 75px;
-            left: 50px;
+            right: 50px;
+            animation: glow 1s infinite alternate;
+
+            @include mq('tablet') {
+                left: 50px;
+            }
+
+            @media screen and (min-height: 800px) {
+                display: none;
+            }
 
             &-text {
                 writing-mode: tb-rl;
@@ -45,5 +55,15 @@ section#hero {
                 width: 15px;
             }
         }
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

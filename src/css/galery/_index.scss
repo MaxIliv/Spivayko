@@ -8,6 +8,7 @@ section#galery {
     &__container {
         margin: 0 auto;
         max-width: 950px;
+        min-height: 300px;
     }
 
     &__item {
@@ -29,6 +30,11 @@ section#galery {
 
     .slick-slide {
         outline: none;
+    }
+
+    .slick-prev, .slick-next {
+        width: auto;
+        height: auto;
     }
 
     .slick-prev:before, .slick-next:before {

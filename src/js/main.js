@@ -9,6 +9,10 @@ var pieces = {
 $window.on('scroll resize', function() {
     checkHeader();
     
+    if($window.width() < 1248) {
+        return;
+    }
+
     updateIndicators();
 });
 
@@ -16,7 +20,11 @@ $window.on('scroll resize', function() {
     checkHeader();
     initSlider();
     hideLoader();
+    initVideo();
+    initYear();
 })();
+
+
 
 function updateIndicators() {
     dotsManager && dotsManager.updateDots();
@@ -53,7 +61,8 @@ function initSlider() {
     var _slicks = document.querySelectorAll('.slick-init');
     var slickConfig = {
         centerMode: true,
-        centerPadding: '50px',
+        infinite: true,
+        centerPadding: '40px',
         slidesToShow: 3,
         focusOnSelect: true,
         autoplay: true,
@@ -66,7 +75,7 @@ function initSlider() {
             settings: {
               arrows: false,
               centerMode: true,
-              centerPadding: '40px',
+              centerPadding: '20px',
               slidesToShow: 3
             }
           },
@@ -85,6 +94,16 @@ function initSlider() {
     _slicks.forEach(function(item) {
         $(item).slick(slickConfig);
     });
+};
+
+function initVideo() {
+    if($window.width() > 768) {
+        document.getElementById('worksVideo').src = 'static/musicVideo.mp4';
+    }
+}
+
+function initYear() {
+    document.getElementById('year').innerText = new Date().getFullYear();
 }
 
 /////// A LITLE BIT OF VUE

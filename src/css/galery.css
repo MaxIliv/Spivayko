@@ -55,7 +55,7 @@ p {
 }
 
 .btn--dark:hover {
-  background-color: #515151;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .btn--orange {
@@ -89,12 +89,8 @@ p {
   max-width: 1024px;
   margin: 0 auto;
   display: block;
-}
-
-@media only screen and (max-width: 1023px) {
-  .container {
-    padding: 0 20px;
-  }
+  width: 100%;
+  padding: 0 40px;
 }
 
 .section {
@@ -155,6 +151,10 @@ a.link--no-underline {
 
 a.link:hover {
   border-bottom: 1px solid rgba(249, 185, 19, 0.8);
+}
+
+a.link--light {
+  color: #dddddd;
 }
 
 @media only screen and (min-width: 640px) {
@@ -367,6 +367,7 @@ section#galery {
 .galery__container {
   margin: 0 auto;
   max-width: 950px;
+  min-height: 300px;
 }
 
 .galery__item {
@@ -388,6 +389,11 @@ section#galery {
 
 .galery .slick-slide {
   outline: none;
+}
+
+.galery .slick-prev, .galery .slick-next {
+  width: auto;
+  height: auto;
 }
 
 .galery .slick-prev:before, .galery .slick-next:before {

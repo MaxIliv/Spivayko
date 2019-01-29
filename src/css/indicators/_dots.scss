@@ -3,6 +3,10 @@ $size-lg: 10px;
 $margin: $size-lg 0;
 
 .dots {
+    @include mq('desktop', max) {
+        display: none;
+    }
+
     $self: &;
     width: 30px;
     text-align: center;

@@ -6,6 +6,10 @@
 
     a {
         margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     &--top {
@@ -28,7 +32,7 @@
     
     &__logo {
         cursor: pointer;
-        max-width: 100px;
+        max-width: 120px;
 
         &-light {
             display: block;
@@ -41,15 +45,11 @@
 
     &__inner {
         max-width: 1024px;
+        padding: 20px 40px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
-
-        @include mq('tablet-wide') {
-            padding: 20px 0;
-        }
 
         a {
             color: rgba($white, .8);
@@ -65,13 +65,13 @@
     $self: &;
     position: fixed;
     left: 30px;
-    top: 100px;
+    top: 50%;
     z-index: 10;
     opacity: 0;
     transition: opacity .3s linear, transform .5s linear;
-    transform: translateX(-100px);
+    transform: translate(-100px, -50%);
     
-    @include mq('tablet-wide', max) {
+    @include mq('desktop', max) {
         display: none;
     }
 
@@ -115,7 +115,7 @@ header {
 
         .social-nav {
             opacity: 1;
-            transform: translateX(0%)
+            transform: translate(0%, -50%);
         }
     }
 }
