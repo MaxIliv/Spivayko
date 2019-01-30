@@ -105,33 +105,3 @@ function initVideo() {
 function initYear() {
     document.getElementById('year').innerText = new Date().getFullYear();
 }
-
-/////// A LITLE BIT OF VUE
-var app = new Vue({
-    el: '#app',
-    data: {
-      message: 'Hello Vue!'
-    }
-});
-
-
-var data = {
-    todos: [
-            { text: 'Learn JavaScript' },
-            { text: 'Learn Vue' },
-            { text: 'Build something awesome' }
-    ]
-};
-var app4 = new Vue({
-    el: '#app-4',
-    data: data
-});
-
-
-// setInterval(() => {
-//     data.todos.push({ text: 'I am a new One' });
-// }, 1000);
-
-
-
-//////
