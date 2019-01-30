@@ -62,6 +62,10 @@ a {
 
         &--light {
             color: #dddddd; 
+
+            i {
+                color: inherit;
+            }
         }
     }
 }

@@ -35,6 +35,7 @@ footer {
         &__logo {
             img {
                 margin: 0 auto;
+                max-width: 200px;
 
                 @include mq('tablet') {
                     display: inline-block;

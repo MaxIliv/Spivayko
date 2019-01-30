@@ -157,6 +157,10 @@ a.link--light {
   color: #dddddd;
 }
 
+a.link--light i {
+  color: inherit;
+}
+
 @media only screen and (min-width: 640px) {
   .ul {
     text-align: left;
@@ -1142,6 +1146,7 @@ footer {
 
 footer .footer__logo img {
   margin: 0 auto;
+  max-width: 200px;
 }
 
 @media only screen and (min-width: 768px) {
