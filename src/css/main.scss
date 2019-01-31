@@ -6,6 +6,7 @@
 @import "about/index";
 @import "workWith/index";
 @import "works/index";
+@import "modal/index";
 @import "regards/index";
 @import "team/index";
 @import "contacts/index";
@@ -16,6 +17,7 @@ body {
     font-size: $fs;
 
     @include font-exo2();
+    color: $blackMain;
 
     &.side-nav--opened, &.modal--opened, &.loading {
         overflow: hidden;

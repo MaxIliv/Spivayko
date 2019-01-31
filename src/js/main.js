@@ -62,8 +62,8 @@ function initSlider() {
     var slickConfig = {
         centerMode: true,
         infinite: true,
-        centerPadding: '40px',
-        slidesToShow: 3,
+        centerPadding: '70px',
+        slidesToShow: 1,
         focusOnSelect: true,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -74,18 +74,7 @@ function initSlider() {
             breakpoint: 768,
             settings: {
               arrows: false,
-              centerMode: true,
-              centerPadding: '20px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '40px',
-              slidesToShow: 1
             }
           }
         ]

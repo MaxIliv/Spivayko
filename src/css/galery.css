@@ -10,15 +10,18 @@ h1 {
 
 h2 {
   font-size: 22px;
+  line-height: 1.4;
 }
 
 h3 {
   font-size: 18px;
   margin-bottom: 5px;
+  line-height: 1.4;
 }
 
 h4 {
   font-size: 16px;
+  line-height: 1.4;
 }
 
 p {
@@ -124,11 +127,10 @@ img {
 }
 
 .overlay--gradient-radial {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
+  background-image: radial-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2));
 }
 
 a {
-  color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
   display: inline-block;
   -webkit-transition: all .3s linear;
@@ -139,6 +141,7 @@ a.link {
   padding: 5px 0 5px;
   border-bottom: 1px solid transparent;
   margin: 0 10px;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 a.link--no-mg {
@@ -168,7 +171,7 @@ a.link--light i {
 }
 
 .ul li {
-  line-height: 1.2;
+  line-height: 1.6;
 }
 
 .ul--square {
@@ -231,6 +234,10 @@ a.link--light i {
   text-align: center;
 }
 
+iframe {
+  width: 100%;
+}
+
 .icon {
   width: 32px;
 }
@@ -285,10 +292,12 @@ i.fa-mobile {
 .text-important {
   display: inline-block;
   padding: 5px 5px 10px;
+  border-radius: 3px;
 }
 
 .text-important--orange {
   background-color: rgba(249, 185, 19, 0.8);
+  color: rgba(254, 254, 254, 0.85);
 }
 
 .heading--line-top:before {

@@ -33,12 +33,11 @@ img {
     }
 
     &--gradient-radial {
-        background-image: radial-gradient($blackMain, rgba($black, .6));
+        background-image: radial-gradient(rgba($black, 0.75), rgba($black, .45), rgba($black, 0.2));
     }
 }
 
 a {
-    color: $blackMain;
     text-decoration: none;
     display: inline-block;
     transition: all .3s linear;
@@ -47,6 +46,7 @@ a {
         padding: 5px 0 5px;
         border-bottom: 1px solid transparent;
         margin: 0 10px;
+        color: $blackMain;
         
         &--no-mg {
             margin: 0;
@@ -76,7 +76,7 @@ a {
     }
 
     li {
-        line-height: 1.2;
+        line-height: 1.6;
     }
 
     &--square {
@@ -133,4 +133,8 @@ a {
 
 .text-center {
     text-align: center;
+}
+
+iframe {
+    width: 100%;
 }

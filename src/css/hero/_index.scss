@@ -15,7 +15,7 @@ section#hero {
             width: 100%;
             @include pos(absolute, 45%);
 
-            h1, h3 { color: $white; }
+            h1, h3 { color: $white85; }
             h1 {
                 font-weight: bold;
                 font-size: $fs-hero-lg;

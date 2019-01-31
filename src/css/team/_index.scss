@@ -35,7 +35,7 @@ section#team {
 
             &__item {
                 flex: 0 0 33.3%;
-                padding: 0 $pd-md;
+                padding: 0 $pd * 1.5;
             }
         }
     }
@@ -76,7 +76,7 @@ section#team {
 
     @include mq('tablet-wide') {
         background-color: $gray;
-        padding: 15px;
+        padding: 20px;
         margin-bottom: 0;
 
         &:hover {
@@ -86,7 +86,7 @@ section#team {
         }
     
         &__photo {
-            transform: scale(3);
+            transform: scale(3.2);
             max-width: 75px;
             transition: transform .3s linear;
         }

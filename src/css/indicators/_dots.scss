@@ -14,16 +14,6 @@ $margin: $size-lg 0;
     right: $size-lg * 1.5;
     z-index: 2;
 
-
-    &--light {
-
-    }
-
-    &--dark {
-
-    
-    }
-
     &__wrap {
         padding: $pd;
         cursor: pointer;
@@ -49,5 +39,16 @@ $margin: $size-lg 0;
             background: none;
             border: 1px solid $orangeMain;
         }
+    }
+
+    &--light {
+        #{ $self }__item {
+            background: $white85;
+        }
+    }
+
+    &--dark {
+
+    
     }
 }
