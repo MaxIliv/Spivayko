@@ -30,3 +30,5 @@ var anchorScroll = (function() {
 
     };
 })();
+
+module.exports = anchorScroll;

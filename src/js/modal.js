@@ -43,3 +43,5 @@ var modal = (function(){
         modal.show(id);
     });
 })();
+
+module.exports = modal;

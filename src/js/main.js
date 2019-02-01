@@ -6,6 +6,9 @@ var pieces = {
     loader: $body.find('#loader')
 };
 
+require('./indication');
+require('./modal');
+
 $window.on('scroll resize', function() {
     checkHeader();
     

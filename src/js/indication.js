@@ -63,3 +63,5 @@ var dotsManager = (function () {
         updateDots: update
     }
 })();
+
+module.exports = dotsManager;
