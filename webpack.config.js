@@ -1,12 +1,15 @@
 var path = require('path');
-var webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// var webpack = require('webpack');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-// Extract CSS
-const extractCSS = new ExtractTextPlugin('styles.min.css');
+// // Extract CSS
+// const extractCSS = new ExtractTextPlugin('styles.min.css');
+
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 module.exports = {
-  entry: './src/js/app.js',
+  entry: './src/js/main.js',
+  mode: 'none',
   output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'js/app.bundle.js'
@@ -14,14 +17,11 @@ module.exports = {
   module: {
     rules: [
           {
-              test: /\.js$/,
-              include: [
-                path.resolve(__dirname, ".src/js")
+            test: /\.(js|jsx)$/,
+            include: [
+              path.resolve(__dirname, ".src/js")
             ],
-              loader: 'babel-loader',
-              query: {
-                presets: ["babel-preset-env"].map(require.resolve)
-              }
+            loader: 'babel-loader'
           },
           {
             test: /\.scss$/,
@@ -32,6 +32,9 @@ module.exports = {
   stats: {
       colors: true
   },
-  devtool: 'source-map',
+  plugins: [
+    new MinifyPlugin()
+  ],
+  // devtool: 'eval-source-map',
   watch: true
 };

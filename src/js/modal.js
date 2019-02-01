@@ -1,3 +1,6 @@
+var $ = require("jquery");
+
+var $body = $('body');
 var modal = (function(){
     var _$container = null;
     var _isShown = null;

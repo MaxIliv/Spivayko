@@ -1,3 +1,5 @@
+var $ = require("jquery");
+
 var dotsManager = (function () {
     var _$body = $('body');
     var _$container = _$body.find('.indication-dots');

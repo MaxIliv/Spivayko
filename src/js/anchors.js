@@ -1,3 +1,5 @@
+var $ = require("jquery");
+
 var anchorScroll = (function() {
     var _$anchors = $('a.anchor-link');
     

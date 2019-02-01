@@ -1,3 +1,19 @@
+var $ = require("jquery");
+
+$.fn.isInViewport = function(shift) {
+    shift = shift || 0;
+    
+    var elementTop = $(this).offset().top - shift;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+require("slick-carousel");
+
 var $window = $(window);
 var $body = $('body');
 var pieces = {
@@ -6,8 +22,9 @@ var pieces = {
     loader: $body.find('#loader')
 };
 
-require('./indication');
+var dotsManager = require('./indication');
 require('./modal');
+require('./anchors');
 
 $window.on('scroll resize', function() {
     checkHeader();
