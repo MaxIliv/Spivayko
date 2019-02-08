@@ -3,7 +3,7 @@ section#works {
     overflow: hidden;
     display: flex;
     align-items: center;
-    @include bg-img('../../static/img/music_video.jpg', cover);
+    @include bg-img('/static/img/music_video.jpg', cover);
 
     @include mq('tablet') {
         min-height: 600px;

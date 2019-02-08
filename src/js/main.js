@@ -1,3 +1,5 @@
+require('../css/main.scss');
+
 var $ = require("jquery");
 
 $.fn.isInViewport = function(shift) {
