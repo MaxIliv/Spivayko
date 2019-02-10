@@ -1,5 +1,11 @@
 section#galery {
     background: $gray;
+
+    @include mq('tablet-small', max) {
+        .container {
+            padding: 0;
+        }
+    }
 }
 
 .galery {
@@ -8,7 +14,7 @@ section#galery {
     &__container {
         margin: 0 auto;
         max-width: 950px;
-        min-height: 250px;
+        min-height: 300px;
     }
 
     &__item {
