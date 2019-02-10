@@ -1,3 +1,5 @@
+var $ = require("jquery");
+
 $.fn.isInViewport = function(shift) {
     shift = shift || 0;
     

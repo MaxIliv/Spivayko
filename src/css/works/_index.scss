@@ -31,16 +31,16 @@ section#works {
             display: block;
         }
     }
+}
 
-    #musicVideoDetails {
-        iframe {
-            min-height: 200px;
-            max-width: 720px;
-            margin: 10px auto;
+#musicVideoDetails {
+    iframe {
+        min-height: 200px;
+        max-width: 720px;
+        margin: 10px auto;
 
-            @include mq('tablet') {
-                min-height: 400px;
-            }
-        }   
-    }
+        @include mq('tablet') {
+            min-height: 400px;
+        }
+    }   
 }

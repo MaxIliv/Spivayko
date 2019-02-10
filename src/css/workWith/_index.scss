@@ -8,7 +8,7 @@ section#workWith {
     }
 
     &__content {
-        margin-bottom: $mb-xs;
+        margin-bottom: $mg * 2.5;
 
         @include mq('tablet-small') {
             @include flex();

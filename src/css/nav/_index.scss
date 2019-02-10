@@ -57,6 +57,21 @@
             }
         }
     }
+
+    &__right {
+        @media screen and (max-width: 720px) {
+            display: none;
+        
+        }
+    }
+
+    &__ham {
+        display: none;
+
+        @media screen and (max-width: 720px) {
+            display: block;
+        }
+    }
 }
 
 .social-nav {
@@ -72,7 +87,7 @@
     @include mq('desktop', max) {
         display: none;
     }
-
+    
     a.social-nav__item {
         display: block;
         font-size: $fsh3;
@@ -118,11 +133,33 @@ header {
             &__logo-dark {
                 display: block;
             }
+
+            .hamburger {
+                &__item {
+                    background-color: $blackMain;
+                }
+            }
         }
 
         .social-nav {
             opacity: 1;
             transform: translate(0%, -50%);
+        }
+    }
+}
+
+.hamburger {
+    width: 30px;
+
+    &__item {
+        display: block;
+        height: 3px;
+        background-color: $white;
+        border-radius: 10px;
+        margin-bottom: 4px;
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }

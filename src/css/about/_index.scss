@@ -11,7 +11,7 @@ section#about {
     &__item {
         display: flex;
         flex: 0 0 50%;
-        margin-bottom: $mb-sm;
+        margin-bottom: $mg * 5;
         padding-right: 20px;
 
         @include mq('tablet') {

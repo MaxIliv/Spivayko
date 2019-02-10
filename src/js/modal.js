@@ -1,12 +1,18 @@
 var $ = require("jquery");
 
 var $body = $('body');
+var $main = $body.find('main');
 var modal = (function(){
     var _$container = null;
     var _isShown = null;
 
     function _toggleBodyScroll() {
         $body.toggleClass('modal--opened');
+    }
+
+    function preventVideoPlayingAfterClose() {
+        const modal = _$container.detach();
+        $main.append(modal);
     }
 
     function _show(id) {
@@ -26,6 +32,7 @@ var modal = (function(){
 
         _toggleBodyScroll();
         _$container.hide();
+        preventVideoPlayingAfterClose();
         _$container = null;
         _isShown = false;
     }

@@ -41,6 +41,13 @@
                         <a class="link a--higlighted anchor-link" href="#contacts">Контакти</a>
                     </span>
                 </div>
+                <div class="nav__ham">
+                    <div class="hamburger">
+                        <div class="hamburger__item"></div>
+                        <div class="hamburger__item"></div>
+                        <div class="hamburger__item"></div>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="social-nav">
@@ -50,6 +57,23 @@
                     <a class="link social-nav__item" target="_blank" href="https://www.instagram.com/spivayko/"><i class="icon-instagram"></i></a>
                 </div>
         </div>
+        <nav class="side-nav">
+            <div class="side-nav__wrap">
+                <div class="side-nav__backdrop"></div>
+                <div class="side-nav__inner">
+                    <div class="side-nav__close close">&times;</div>                
+                    <span class="nav__logo">
+                        <img src="static/logo-dark.png" alt="logo">
+                    </span>
+                    <a class="link anchor-link" href="#about">Про нас</a>
+                    <a class="link anchor-link" href="#team">Команда</a>
+                    <a class="link anchor-link" href="#galery">Галерея</a>
+                    <span class="">
+                        <a class="link a--higlighted anchor-link" href="#contacts">Контакти</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="indication-dots dots"></div>
@@ -209,17 +233,6 @@
                     <button class="btn btn--orange btn--lg modal-open" data-modal="musicVideoDetails">Дізнатись Більше</button>
                 </div>
             </div>
-            <div id="musicVideoDetails" class="modal modal--light">
-                <div class="modal__close">&times;</div>
-                <div class="modal__body">
-                    <div class="container">
-                        <iframe id="ytplayer" src="https://www.youtube.com/embed/nuN3QXfKIaY?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
-                        <iframe id="ytplayer" src="https://www.youtube.com/embed/Aiha8c4745Q?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
-                        <iframe id="ytplayer" src="https://www.youtube.com/embed/HBqqyOevERY?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
-                        <iframe id="ytplayer" src="https://www.youtube.com/embed/9uL91WHulRQ?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
-                    </div>
-                </div>
-            </div>
         </section>
         <section id="regards" class="section">
             <div class="orange-brick orange-brick--top-left"></div> 
@@ -320,6 +333,34 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="team__list__item ">
+                            <div class="member">
+                                <h3 class="member__name">Олександра Погуляй</h3>
+                                <p class="member__position">Режисер-постановник</p>
+                                <div class="member__photo">
+                                    <img src="static/img/team/Oleksandra.jpg" alt="Oleksandra">
+                                </div>
+                                <div class="member__social">
+                                    <div class="social-list">
+                                        <a class="link" href="https://instagram.com/sashapogulyay" target="_blank"><i class="social-list__item icon-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__list__item ">
+                            <div class="member">
+                                <h3 class="member__name">Ярослава Мрія</h3>
+                                <p class="member__position">Викладач</p>
+                                <div class="member__photo">
+                                    <img src="static/img/team/Yaroslava.jpg" alt="Yaroslava">
+                                </div>
+                                <div class="member__social">
+                                    <div class="social-list">
+                                        <a class="link" href="https://instagram.com/y_mriya" target="_blank"><i class="social-list__item icon-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -405,6 +446,17 @@
                </div>
             </div>
         </section>
+        <div id="musicVideoDetails" class="modal modal--light">
+            <div class="modal__close close">&times;</div>
+            <div class="modal__body">
+                <div class="container">
+                    <iframe src="https://www.youtube.com/embed/nuN3QXfKIaY?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
+                    <iframe src="https://www.youtube.com/embed/Aiha8c4745Q?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
+                    <iframe src="https://www.youtube.com/embed/HBqqyOevERY?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
+                    <iframe src="https://www.youtube.com/embed/9uL91WHulRQ?iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container">
@@ -412,7 +464,7 @@
                     <div class="footer__item footer__content flex">
                         <div class="flex--half">
                             <div class="footer__item footer__logo">
-                                <img src="static/logo-large.png" alt="Spivayko" />
+                                <a class="anchor-link" href="#hero"><img src="static/logo-large.png" alt="Spivayko" /></a>
                             </div>
                             <h3 class="footer__item">
                                 Стань частиною нашої

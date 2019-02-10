@@ -54,15 +54,31 @@ $head-mg: 25px;
     &--mb {
 
         &-lg {
-            margin-bottom: $mb-lg;
+            margin-bottom: $mg * 7;
         }
 
         &-md {
-            margin-bottom: $mb-md;
+            margin-bottom: $mg * 4.5;
         }
 
         &-sm {
-            margin-bottom: $mb-sm;
+            margin-bottom: $mg * 2.5;
+        }
+    }
+
+    @include mq('tablet') {
+        &--mb {
+            &-lg {
+                margin-bottom: $mg * 10;
+            }
+    
+            &-md {
+                margin-bottom: $mg * 7.5;
+            }
+    
+            &-sm {
+                margin-bottom: $mg * 5;
+            }
         }
     }
 }

@@ -1,20 +1,9 @@
 require('../css/main.scss');
+require("slick-carousel");
+require('./jquery-extend');
+require("./sideNav");
 
 var $ = require("jquery");
-
-$.fn.isInViewport = function(shift) {
-    shift = shift || 0;
-    
-    var elementTop = $(this).offset().top - shift;
-    var elementBottom = elementTop + $(this).outerHeight();
-
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
-
-require("slick-carousel");
 
 var $window = $(window);
 var $body = $('body');
@@ -96,7 +85,8 @@ function initSlider() {
             breakpoint: 768,
             settings: {
               arrows: false,
-              centerPadding: '40px',
+              centerPadding: '0',
+              dots: true
             }
           }
         ]
