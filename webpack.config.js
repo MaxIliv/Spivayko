@@ -52,6 +52,6 @@ module.exports = {
       chunkFilename: "[id].css"
     })
   ],
-  devtool: 'eval-source-map',
-  watch: true
+  // devtool: 'eval-source-map',
+  watch: false
 };
