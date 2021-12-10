@@ -98,8 +98,14 @@ function initSlider() {
 };
 
 function initVideo() {
-    if($window.width() > 768) {
-        document.getElementById('worksVideo').src = '/static/musicVideo.mp4';
+    if ($window.width() < 768) {
+        return;
+    }
+
+    const video = document.getElementById('worksVideo');
+
+    if (!video) {
+        return;
     }
 }
 
