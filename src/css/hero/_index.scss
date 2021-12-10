@@ -3,7 +3,7 @@ section#hero {
     position: relative;
     height: 100vh;
     max-height: 768px;
-    @include bg-img('../../static/img/hero.jpg', cover);
+    @include bg-img('/src/static/img/hero.jpg', cover);
     @include font-montserat();
 
     .hero {

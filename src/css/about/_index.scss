@@ -1,5 +1,5 @@
 section#about {
-    @include bg-img('../../static/img/music-notes.png', contain);
+    @include bg-img('/src/static/img/music-notes.png', contain);
 }
 
 .info-list {
