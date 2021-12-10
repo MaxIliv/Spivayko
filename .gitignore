@@ -111,3 +111,4 @@ typings/
 #Press h to open a hovercard with more details.
 
 .DS_Store
+dist/
