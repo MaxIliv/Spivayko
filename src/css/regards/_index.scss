@@ -1,7 +1,7 @@
 section#regards {
     position: relative;
     overflow: hidden;
-    @include bg-img('/static/img/music-notes.png', contain);
+    @include bg-img('/src/static/img/music-notes.png', contain);
 
     .regards-list {
         text-align: center;
