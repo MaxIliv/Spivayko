@@ -53,7 +53,7 @@ module.exports = {
       chunkFilename: "src/css/[id].css"
     }),
     new CopyPlugin([
-      { from: 'static', to: 'static' },
+      { from: 'src/static', to: 'src/static' },
       { from: 'src/css/vendor', to: 'src/css/vendor' },
       { from: 'fonts', to: 'fonts' },
       { from: 'index.html', to: 'index.html' },
